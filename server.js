@@ -25,12 +25,20 @@ async function init()
     /*Initialize the mongo db
     need to create THE ADMIN user
      */
- const admin=await userModel.create({
-        name: "Vandan Raval",
-        userId:"admin",
-        email:"vandanraval2002@gmail.com",
+      let admin=await userModel.findOne({
+        userId:"admin"
+    });
+    if(admin)
+    {
+        console.log("Admin user already present");
+        return;
+    }
+  admin = await userModel.create({
+        name: "Maulik raval",
+        userId:"admin1",
+        email:"maulikraval6688@gmail.com",
         userType:"ADMIN",
-        password:"welcome1"
+        password:"welcome2"
     });
     console.log(admin);
 }
