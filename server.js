@@ -28,7 +28,7 @@ async function init()
  const admin=await userModel.create({
         name: "Vandan Raval",
         userId:"admin",
-        email:"vandanraval2002@gmail..com",
+        email:"vandanraval2002@gmail.com",
         userType:"ADMIN",
         password:"welcome1"
     });
